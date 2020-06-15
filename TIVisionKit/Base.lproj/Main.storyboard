@@ -1,24 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CC0-rC-7KG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Features-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YfH-VE-1Yb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeatureViewCell" rowHeight="90" id="c7X-ji-akw" customClass="FeatureViewCell" customModule="TIVisionKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c7X-ji-akw" id="Eg7-xZ-T59">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-1U-ixO">
+                                                    <rect key="frame" x="20" y="11" width="374" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8TI-1U-ixO" firstAttribute="bottom" secondItem="Eg7-xZ-T59" secondAttribute="bottomMargin" id="SRp-cb-h3Y"/>
+                                                <constraint firstItem="8TI-1U-ixO" firstAttribute="top" secondItem="Eg7-xZ-T59" secondAttribute="topMargin" id="fLa-OP-vBz"/>
+                                                <constraint firstItem="8TI-1U-ixO" firstAttribute="leading" secondItem="Eg7-xZ-T59" secondAttribute="leadingMargin" id="ovp-BZ-4qk"/>
+                                                <constraint firstItem="8TI-1U-ixO" firstAttribute="trailing" secondItem="Eg7-xZ-T59" secondAttribute="trailingMargin" id="r6D-zU-Y8l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbTitle" destination="8TI-1U-ixO" id="pCE-z3-OWZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wu8-2e-mrh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="euE-dg-1pl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YfH-VE-1Yb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8MH-L1-Ysq"/>
+                            <constraint firstItem="YfH-VE-1Yb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PXN-J1-iv4"/>
+                            <constraint firstItem="YfH-VE-1Yb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PXX-sg-zd0"/>
+                            <constraint firstItem="YfH-VE-1Yb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uV8-NS-rwh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Features" id="EqW-LV-ykm"/>
+                    <connections>
+                        <segue destination="VOA-Sv-arM" kind="show" identifier="moveToStillImageViewSegue" id="G7d-kS-y5j"/>
+                        <segue destination="9hU-Bw-55q" kind="show" identifier="moveToFaceTrackingViewSegue" id="ymr-ng-T8v"/>
+                        <segue destination="U9L-Vt-Omd" kind="show" identifier="moveToQRCodeTrackingViewSegue" id="30a-YJ-zJ0"/>
+                        <segue destination="Gpn-jd-p6L" kind="show" identifier="moveToImageProcessingViewSegue" id="eTJ-94-U9d"/>
+                        <segue destination="Njk-yA-Db7" kind="show" identifier="moveToCameraSelectionViewSegue" id="kQB-A1-iR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="783" y="593"/>
+        </scene>
+        <!--Face Tracking-->
+        <scene sceneID="ima-S2-fSk">
+            <objects>
+                <viewController id="9hU-Bw-55q" customClass="FaceTrackingViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gzh-eZ-0Wx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XHa-6Q-asm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Face Tracking" id="a9o-3e-IJD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QvP-MB-HRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="483"/>
+        </scene>
+        <!--Core ML-->
+        <scene sceneID="U6i-3z-0Ek">
+            <objects>
+                <viewController id="VOA-Sv-arM" customClass="StillImageViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="umZ-rd-gyV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1f3-0A-quH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Core ML" id="FKd-F8-oUN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mav-bN-g4C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="1163"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W1m-wN-gGJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CC0-rC-7KG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OTH-M0-hMu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n46-iI-Uts"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmp-bh-Nyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="593"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="gMk-Sf-6Ds">
+            <objects>
+                <viewController id="Njk-yA-Db7" customClass="CameraSelectionViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K23-Ov-qqX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kyo-w8-jb4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="XQf-y8-Sse"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMU-TX-y75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="-1505"/>
+        </scene>
+        <!--Image Processing-->
+        <scene sceneID="3SC-AI-s0T">
+            <objects>
+                <viewController id="Gpn-jd-p6L" customClass="ImageProcessingViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gmX-az-7fI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Pu-8a-9KZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Processing" id="f55-9J-fan"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osJ-gV-ChC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="-856"/>
+        </scene>
+        <!--QR Code-->
+        <scene sceneID="oOA-yn-0SO">
+            <objects>
+                <viewController id="U9L-Vt-Omd" customClass="QRCodeTrackingViewController" customModule="TIVisionKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Mk-5p-svW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FSb-pJ-vFd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR Code" id="H19-u6-WMf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJX-Jg-idh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183" y="-187"/>
         </scene>
     </scenes>
 </document>

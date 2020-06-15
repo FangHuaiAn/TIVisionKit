@@ -10,3 +10,5 @@ pod init
 pod install
 git add .
 git commit -m "add pod"
+git remote add origin git@github.com:FangHuaiAn/TIVisionKit.git
+git push -u origin master

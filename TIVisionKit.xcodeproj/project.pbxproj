@@ -13,6 +13,13 @@
 		8B21276D24970F2800149042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B21276B24970F2800149042 /* Main.storyboard */; };
 		8B21276F24970F2A00149042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B21276E24970F2A00149042 /* Assets.xcassets */; };
 		8B21277224970F2A00149042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B21277024970F2A00149042 /* LaunchScreen.storyboard */; };
+		8B21277B2497117A00149042 /* FeatureViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B21277A2497117A00149042 /* FeatureViewCell.swift */; };
+		8B212782249713D000149042 /* CameraSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B212781249713D000149042 /* CameraSelectionViewController.swift */; };
+		8B212784249713DE00149042 /* ImageProcessingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B212783249713DE00149042 /* ImageProcessingViewController.swift */; };
+		8B212786249713EF00149042 /* QRCodeTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B212785249713EF00149042 /* QRCodeTrackingViewController.swift */; };
+		8B212788249713FF00149042 /* FaceTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B212787249713FF00149042 /* FaceTrackingViewController.swift */; };
+		8B21278A2497141200149042 /* StillImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2127892497141200149042 /* StillImageViewController.swift */; };
+		8B21278C2497159C00149042 /* NavigationIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B21278B2497159C00149042 /* NavigationIdentifier.swift */; };
 		8FF81C7E56B5061BA68DB39E /* Pods_TIVisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E97A4DEF10F888A339393F6 /* Pods_TIVisionKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +35,13 @@
 		8B21276E24970F2A00149042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B21277124970F2A00149042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B21277324970F2A00149042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B21277A2497117A00149042 /* FeatureViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewCell.swift; sourceTree = "<group>"; };
+		8B212781249713D000149042 /* CameraSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSelectionViewController.swift; sourceTree = "<group>"; };
+		8B212783249713DE00149042 /* ImageProcessingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingViewController.swift; sourceTree = "<group>"; };
+		8B212785249713EF00149042 /* QRCodeTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeTrackingViewController.swift; sourceTree = "<group>"; };
+		8B212787249713FF00149042 /* FaceTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackingViewController.swift; sourceTree = "<group>"; };
+		8B2127892497141200149042 /* StillImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StillImageViewController.swift; sourceTree = "<group>"; };
+		8B21278B2497159C00149042 /* NavigationIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,12 @@
 		8B21276424970F2800149042 /* TIVisionKit */ = {
 			isa = PBXGroup;
 			children = (
+				8B21277C2497135A00149042 /* Camera */,
+				8B21277D2497136700149042 /* ImageProcessing */,
+				8B21277E2497137100149042 /* QRCode */,
+				8B21277F2497137C00149042 /* FaceTracking */,
+				8B2127802497138500149042 /* CoreML */,
+				8B2127792497115F00149042 /* Cell */,
 				8B21276524970F2800149042 /* AppDelegate.swift */,
 				8B21276724970F2800149042 /* SceneDelegate.swift */,
 				8B21276924970F2800149042 /* ViewController.swift */,
@@ -70,8 +90,57 @@
 				8B21276E24970F2A00149042 /* Assets.xcassets */,
 				8B21277024970F2A00149042 /* LaunchScreen.storyboard */,
 				8B21277324970F2A00149042 /* Info.plist */,
+				8B21278B2497159C00149042 /* NavigationIdentifier.swift */,
 			);
 			path = TIVisionKit;
+			sourceTree = "<group>";
+		};
+		8B2127792497115F00149042 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8B21277A2497117A00149042 /* FeatureViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8B21277C2497135A00149042 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				8B212781249713D000149042 /* CameraSelectionViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		8B21277D2497136700149042 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				8B212783249713DE00149042 /* ImageProcessingViewController.swift */,
+			);
+			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		8B21277E2497137100149042 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8B212785249713EF00149042 /* QRCodeTrackingViewController.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		8B21277F2497137C00149042 /* FaceTracking */ = {
+			isa = PBXGroup;
+			children = (
+				8B212787249713FF00149042 /* FaceTrackingViewController.swift */,
+			);
+			path = FaceTracking;
+			sourceTree = "<group>";
+		};
+		8B2127802497138500149042 /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				8B2127892497141200149042 /* StillImageViewController.swift */,
+			);
+			path = CoreML;
 			sourceTree = "<group>";
 		};
 		B5845CA744CFECD989A9AB2D /* Pods */ = {
@@ -80,7 +149,6 @@
 				3C324A31831ECC66FD8CF7D1 /* Pods-TIVisionKit.debug.xcconfig */,
 				41A039332186AE81CCFEAB40 /* Pods-TIVisionKit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -189,9 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B212788249713FF00149042 /* FaceTrackingViewController.swift in Sources */,
 				8B21276A24970F2800149042 /* ViewController.swift in Sources */,
+				8B21278C2497159C00149042 /* NavigationIdentifier.swift in Sources */,
 				8B21276624970F2800149042 /* AppDelegate.swift in Sources */,
 				8B21276824970F2800149042 /* SceneDelegate.swift in Sources */,
+				8B212784249713DE00149042 /* ImageProcessingViewController.swift in Sources */,
+				8B212786249713EF00149042 /* QRCodeTrackingViewController.swift in Sources */,
+				8B21278A2497141200149042 /* StillImageViewController.swift in Sources */,
+				8B21277B2497117A00149042 /* FeatureViewCell.swift in Sources */,
+				8B212782249713D000149042 /* CameraSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
